@@ -22,7 +22,8 @@ module.exports = {
     // this will return -1 if it isn't in the cart
     // -1 means there isn't anything in the array
     const index = user.cart.findIndex(swag => swag.id == id);
-    const selectedSwag = swag.findIndex(swag => swag.id == id);
+    // find from cart if it equals id
+    const selectedSwag = swag.find(swag => swag.id == id);
     // if swag is in the cart, remove the swag from the cart and subtract the price from the total
     if (index !== -1) {
       user.cart.splice(index, 1);

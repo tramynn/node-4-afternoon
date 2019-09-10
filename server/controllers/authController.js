@@ -39,6 +39,6 @@ module.exports = {
   },
   getUser: (req, res) => {
     const { session } = req;
-    res.status(200).json(session.user);
+    res.status(200).send(session.user);
   }
 };
